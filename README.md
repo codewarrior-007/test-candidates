@@ -35,3 +35,14 @@ replacement. If you need to change the port, you can find it in `webpack.config.
    extensible than a bunch of inline logic. Consider leveraging it for the steps and name filter.
  - Keep it organized: component composition and file structure should reflect what you
    might see in a larger project.
+
+### Evaluation criteria
+ - All interactive aspects of the table should function intuitively.
+ - No UI frameworks, please! We'd like to see your styling capabilities
+ - Redux might be overkill for this table in a vacuum, but it sure is tidier and more 
+   extensible than a bunch of inline logic. Consider leveraging it for the steps and name filter.
+ - Keep it organized: component composition and file structure should reflect what you
+   might see in a larger project.
+
+### Complete
+  <img src="docs/img/complete.png" width="580">
