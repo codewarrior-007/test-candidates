@@ -1,0 +1,139 @@
+// Colors
+@light-navy: #eff1f6;
+@medium-navy: #9caac0;
+@navy: #162d54;
+@lightest-grey: #f5f5f5;
+@light-grey: #ddd;
+@mid-grey: #bbb;
+@slate-grey: #9b9b9b;
+@space-grey: #4a4a4a;
+@red-orange: #fc6635;
+@teal: #00cba5;
+
+// Styles
+body,
+input,
+select,
+option {
+  font: 15px "Ropa Sans", sans-serif;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+}
+
+.header {
+  margin: 15px 0;
+
+  font-size: 36px;
+  line-height: 46px;
+  color: @navy;
+}
+
+.container {
+  margin: 20px;
+  border: 2px solid @teal;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+
+  & .box-filter {
+    margin-top: 50px;
+    margin-right: 50px;
+    list-style: none;
+    padding: 0px;
+
+    & li {
+      padding-left: 12px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-left: 5px solid white;
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: @slate-grey;
+      cursor: pointer;
+      text-transform: uppercase;
+
+      &.selected {
+        border-left: 5px solid @teal;
+        font-weight: 600;
+        color: black;
+      }
+    }
+  }
+
+  & .search-bar {
+    border-bottom: 2px solid @teal;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    max-width: 300px;
+
+    & .icon {
+      color: @mid-grey;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    & input {
+      border: 0px;
+      color: @mid-grey;
+      font-size: 18px;
+      flex-grow: 1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  & .table-candidates {
+    border-collapse: collapse;
+
+    & tr {
+      border-bottom: 2px solid @light-grey;
+    }
+
+    & th {
+      padding: 5px;
+      min-width: 150px;
+      text-align: left;
+      color: @mid-grey;
+      font-weight: 500;
+    }
+
+    & td {
+      padding: 10px;
+      font-size: 18px;
+      position: relative;
+
+      &:first-child {
+        color: black;
+      }
+
+      &:nth-child(2) {
+        color: @space-grey;
+      }
+
+      & select {
+        border-radius: 10px;
+        padding: 5px;
+        border: 2px solid @mid-grey;
+        font-weight: 600;
+        text-transform: uppercase;
+        width: 200px;
+        color: @mid-grey;
+
+        &.step-selected {
+          color: @space-grey;
+        }
+      }
+
+      & i {
+        position: absolute;
+        left: 215px;
+        top: 15px;
+      }
+    }
+  }
+}
